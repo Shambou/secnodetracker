@@ -116,12 +116,13 @@ const getRPC = () => {
     let testnet = false;
     lines.forEach(line => {
         if (line.indexOf('#') == -1 && line.indexOf("rpc") == 0) {
-            console.log(idx);
             let idx = line.indexOf("=");  //don't use split since user or pw could have =
             let key = line.substring(0, idx);
             let val = line.substring(idx + 1);
 
             console.log(line);
+            console.log(idx);
+            console.log(val);
             console.log(key);
 
 	            if(key = 'rpcallowip'){
