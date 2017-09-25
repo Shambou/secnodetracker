@@ -120,10 +120,10 @@ const getRPC = () => {
             let key = line.substring(0, idx);
             let val = line.substring(idx + 1);
 
-            console.log(line);
-            console.log(idx);
-            console.log(val);
-            console.log(key);
+            console.log("Line" + line);
+            console.log("idx" + idx);
+            console.log("val" + val);
+            console.log("key" + key);
 
 	            if(key = 'rpcallowip'){
 	    	        if(localStorage.getItem('ipv') == 6){
