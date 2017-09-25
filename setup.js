@@ -102,8 +102,6 @@ const getRPC = () => {
         } else if (fs.existsSync(path3)) {
             lines = fs.readFileSync(path3, "utf8").split("\n");
         }
-
-        console.log(lines);
     }
     catch (e) {
         console.log("ERROR finding or reading zen.conf file. Make sure the zen secure node is set up properly.");
@@ -116,6 +114,7 @@ const getRPC = () => {
     let testnet = false;
     lines.forEach(line => {
         if (line.indexOf('#') == -1 && line.indexOf("rpc") == 0) {
+            console.log(line);
             let idx = line.indexOf("=");  //don't use split since user or pw could have =
             let key = line.substring(0, idx);
             let val = line.substring(idx + 1);
@@ -128,11 +127,12 @@ const getRPC = () => {
 	                else{
             	    localStorage.setItem(key, val);
 	                }
-	            } else {
-                    console.log("Key: " + key);
-                    console.log("Val: " + val);
-                    localStorage.setItem(key, val);
-                }
+	            } 
+        
+            console.log("Key: " + key);
+            console.log("Val: " + val);
+            localStorage.setItem(key, val);
+        
         }
         if (line == 'testnet=1') testnet = true;
     });
