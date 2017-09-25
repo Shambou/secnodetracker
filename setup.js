@@ -121,9 +121,9 @@ const getRPC = () => {
             let key = line.substring(0, idx);
             let val = line.substring(idx + 1);
 
-            console.log(idx);
+            console.log(line);
             console.log(key);
-            console.log(val);
+
 	            if(key = 'rpcallowip'){
 	    	        if(localStorage.getItem('ipv') == 6){
                     //if ipv6 leave rpcallowip blank to prevent errors
