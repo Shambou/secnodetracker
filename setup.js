@@ -120,11 +120,6 @@ const getRPC = () => {
             let key = line.substring(0, idx);
             let val = line.substring(idx + 1);
 
-            console.log("Line \t" + line);
-            console.log("idx \t" + idx);
-            console.log("val \t" + val);
-            console.log("key \t" + key);
-
 	            if(key = 'rpcallowip'){
 	    	        if(localStorage.getItem('ipv') == 6){
                     //if ipv6 leave rpcallowip blank to prevent errors
@@ -135,7 +130,7 @@ const getRPC = () => {
 	                }
 	            }
 
-                localStorage.setItem(key, val);
+            localStorage.setItem(key, val);
         }
         if (line == 'testnet=1') testnet = true;
     });
