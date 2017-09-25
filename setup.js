@@ -103,7 +103,7 @@ const getRPC = () => {
             lines = fs.readFileSync(path3, "utf8").split("\n");
         }
 
-        //console.log(path);
+        console.log(lines);
     }
     catch (e) {
         console.log("ERROR finding or reading zen.conf file. Make sure the zen secure node is set up properly.");
