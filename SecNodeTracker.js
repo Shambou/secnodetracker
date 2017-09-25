@@ -18,7 +18,7 @@ const cfg = {
     password: local.getItem('rpcpassword'),
     hostname: local.getItem('rpcbind'),
 }
-
+console.log(cfg);
 const errmsg = "Unable to connect to zend. Please check the zen rpc settings and ensure zend is running";
 
 const os = process.platform;
