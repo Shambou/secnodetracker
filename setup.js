@@ -129,8 +129,9 @@ const getRPC = () => {
             	    localStorage.setItem(key, val);
 	                }
 	            } else {
-
-                    localStorage.setItem("'"+key+"'", val);        
+                    console.log("Key: " + key);
+                    console.log("Val: " + val);
+                    localStorage.setItem(key, val);
                 }
         }
         if (line == 'testnet=1') testnet = true;
